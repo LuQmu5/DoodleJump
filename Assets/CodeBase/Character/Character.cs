@@ -6,6 +6,7 @@ public class Character : MonoBehaviour
 {
     private Rigidbody2D _rigidbody;
     private float _speed = 5;
+    private CharacterProgressHandler _progressHandler;
 
     private void Awake()
     {
@@ -13,6 +14,14 @@ public class Character : MonoBehaviour
     }
 
     private void Update()
+    {
+        Move();
+
+        if (transform.position.y > _progressHandler.MaxHeight)
+            _progressHandler.SetMaxHeight(transform.position.y);
+    }
+
+    private void Move()
     {
         if (Input.GetKey(KeyCode.Mouse0))
         {
@@ -32,9 +41,4 @@ public class Character : MonoBehaviour
             _rigidbody.velocity = new Vector2(0, _rigidbody.velocity.y);
         }
     }
-}
-
-public class CharacterProgressHandler
-{
-
 }

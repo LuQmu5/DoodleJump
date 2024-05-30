@@ -11,16 +11,16 @@ public class PlatformCreator
     private PlatformFactory _factory;
     private List<Platform> _platforms = new List<Platform>();
 
-    private float _highestPlatformY = BaseHighestPlatformY;
+    public float HighestPlatformY { get; private set; } = BaseHighestPlatformY;
 
     public void SpawnPlatform()
     {
         Platform platform = GetPlatform(RandomPlatformType());
 
-        platform.transform.position.SetY(_highestPlatformY + StepY);
+        platform.transform.position.SetY(HighestPlatformY + StepY);
         platform.transform.position.SetRandomXOnScreen();
 
-        _highestPlatformY = platform.transform.position.y;
+        HighestPlatformY = platform.transform.position.y;
     }
 
     private PlatformType RandomPlatformType() => (PlatformType)Random.Range(0, Enum.GetValues(typeof(PlatformType)).Length);
