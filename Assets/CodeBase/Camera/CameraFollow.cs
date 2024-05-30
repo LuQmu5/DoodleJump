@@ -8,9 +8,11 @@ public class CameraFollow : MonoBehaviour
 
     private void Update()
     {
-        if (_character.transform.position.y - transform.position.y > _maxOffsetY)
+        float distanceDelta = _character.transform.position.y - transform.position.y;
+
+        if (distanceDelta > _maxOffsetY)
         {
-            transform.Translate(Vector2.up * Time.deltaTime * _speed);
+            transform.Translate(Vector2.up * Time.deltaTime * _speed * distanceDelta);
         }
     }
 }

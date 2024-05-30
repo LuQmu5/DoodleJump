@@ -1,16 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
 public class Character : MonoBehaviour
 {
-    private Rigidbody2D _rigidbody;
+    [SerializeField] private Rigidbody2D _rigidbody;
+
     private float _speed = 5;
     private CharacterProgressHandler _progressHandler;
 
-    private void Awake()
+    [Inject]
+    public void Construct(CharacterProgressHandler progressHandler)
     {
-        _rigidbody = GetComponent<Rigidbody2D>();
+        _progressHandler = progressHandler;
     }
 
     private void Update()

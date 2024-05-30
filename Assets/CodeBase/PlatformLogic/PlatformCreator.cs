@@ -1,24 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
+using Zenject;
 using Random = UnityEngine.Random;
 
 public class PlatformCreator
 {
-    private const float StepY = 2;
-    private const float BaseHighestPlatformY = 4;
-
     private PlatformFactory _factory;
     private List<Platform> _platforms = new List<Platform>();
 
-    public float HighestPlatformY { get; private set; } = BaseHighestPlatformY;
+    private float _stepY = 2;
+
+    public float HighestPlatformY { get; private set; } = 4;
+
+    [Inject]
+    public PlatformCreator(PlatformFactory factory)
+    {
+        Debug.Log(GetType());
+
+        _factory = factory;
+    }
 
     public void SpawnPlatform()
     {
         Platform platform = GetPlatform(RandomPlatformType());
 
-        platform.transform.position.SetY(HighestPlatformY + StepY);
-        platform.transform.position.SetRandomXOnScreen();
+        platform.transform.position = new Vector3(Random.Range(-2f, 2f), HighestPlatformY + _stepY);
 
         HighestPlatformY = platform.transform.position.y;
     }

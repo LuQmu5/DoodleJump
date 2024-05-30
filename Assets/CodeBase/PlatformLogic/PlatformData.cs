@@ -4,5 +4,6 @@
 public class PlatformData : ScriptableObject
 {
     [field: SerializeField] public PlatformType Type { get; private set; }
+    [field: SerializeField] public float PushPower { get; private set; }
     [field: SerializeField] public Platform PlatformPrefab { get; private set; }
 }

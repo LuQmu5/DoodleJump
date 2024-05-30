@@ -1,10 +1,16 @@
 ﻿using System;
+using UnityEngine;
 
 public class CharacterProgressHandler
 {
     public float MaxHeight { get; private set; } = 0;
 
     public event Action<float> MaxHeightChanged;
+
+    public CharacterProgressHandler()
+    {
+        Debug.Log(GetType());
+    }
 
     public void SetMaxHeight(float value)
     {

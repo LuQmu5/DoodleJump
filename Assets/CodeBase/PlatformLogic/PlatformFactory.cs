@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Linq;
-using UnityEditorInternal.Profiling.Memory.Experimental.FileFormat;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
@@ -12,16 +11,21 @@ public class PlatformFactory
 
     public PlatformFactory()
     {
+        Debug.Log(GetType());
+
         _data = Resources.LoadAll<PlatformData>(PlatformConfigsPath);
     }
 
     public Platform Get(PlatformType type)
     {
-        Platform platform = _data.FirstOrDefault(i => i.Type == type).PlatformPrefab;
+        PlatformData data = _data.FirstOrDefault(i => i.Type == type);
 
-        if (platform == null)
+        if (data == null)
             throw new ArgumentException($"Can't find {type} type platform");
 
-        return Object.Instantiate(platform);
+        Platform platform = Object.Instantiate(data.PlatformPrefab);
+        platform.Init(data.Type, data.PushPower);
+
+        return platform;
     }
 }
