@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using UnityEditorInternal.Profiling.Memory.Experimental.FileFormat;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
@@ -23,9 +24,4 @@ public class PlatformFactory
 
         return Object.Instantiate(platform);
     }
-}
-
-public class PlatformCreator
-{
-
 }

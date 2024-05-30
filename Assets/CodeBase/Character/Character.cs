@@ -33,3 +33,8 @@ public class Character : MonoBehaviour
         }
     }
 }
+
+public class CharacterProgressHandler
+{
+
+}
