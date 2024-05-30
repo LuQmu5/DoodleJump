@@ -230,7 +230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxOffsetY: 2
   _speed: 2
-  _character: {fileID: 1735025719}
+  _followTarget: {fileID: 1735025718}
 --- !u!1 &520284466
 GameObject:
   m_ObjectHideFlags: 0

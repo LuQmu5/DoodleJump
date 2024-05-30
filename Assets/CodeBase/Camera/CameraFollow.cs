@@ -2,17 +2,20 @@
 
 public class CameraFollow : MonoBehaviour
 {
-    public float _maxOffsetY;
-    public float _speed;
-    public Character _character;
+    [SerializeField] private float _maxOffsetY;
+    [SerializeField] private float _speed;
+    [SerializeField] private Transform _followTarget;
 
     private void Update()
     {
-        float distanceDelta = _character.transform.position.y - transform.position.y;
+        Follow();
+    }
+
+    private void Follow()
+    {
+        float distanceDelta = _followTarget.transform.position.y - transform.position.y;
 
         if (distanceDelta > _maxOffsetY)
-        {
             transform.Translate(Vector2.up * Time.deltaTime * _speed * distanceDelta);
-        }
     }
 }

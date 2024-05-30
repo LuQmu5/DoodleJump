@@ -11,6 +11,8 @@ public class PlatformCreator
     private List<Platform> _platforms = new List<Platform>();
 
     private float _stepY = 2;
+    private float _minX = -2.25f;
+    private float _maxX = 2.25f;
 
     public float HighestPlatformY { get; private set; } = 4;
 
@@ -26,7 +28,7 @@ public class PlatformCreator
     {
         Platform platform = GetPlatform(RandomPlatformType());
 
-        platform.transform.position = new Vector3(Random.Range(-2f, 2f), HighestPlatformY + _stepY);
+        platform.transform.position = new Vector3(Random.Range(_minX, _maxX), HighestPlatformY + _stepY);
 
         HighestPlatformY = platform.transform.position.y;
     }
