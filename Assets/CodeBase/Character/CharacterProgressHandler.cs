@@ -7,11 +7,6 @@ public class CharacterProgressHandler
 
     public event Action<float> MaxHeightChanged;
 
-    public CharacterProgressHandler()
-    {
-        Debug.Log(GetType());
-    }
-
     public void SetMaxHeight(float value)
     {
         if (value <= MaxHeight)

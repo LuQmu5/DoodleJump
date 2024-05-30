@@ -6,14 +6,14 @@ public class ProgressHandlerMediator : IDisposable
 {
     private CharacterProgressHandler _characterProgressHandler;
     private PlatformCreator _platformCreator;
+    private GameConfig _gameConfig;
 
     [Inject]
-    public ProgressHandlerMediator(CharacterProgressHandler characterProgressHandler, PlatformCreator platformCreator)
+    public ProgressHandlerMediator(CharacterProgressHandler characterProgressHandler, PlatformCreator platformCreator, GameConfig gameConfig)
     {
-        Debug.Log(GetType());
-
         _characterProgressHandler = characterProgressHandler;
         _platformCreator = platformCreator;
+        _gameConfig = gameConfig;
 
         _characterProgressHandler.MaxHeightChanged += OnCharacterMaxHeightChanged;
     }
@@ -25,9 +25,7 @@ public class ProgressHandlerMediator : IDisposable
 
     private void OnCharacterMaxHeightChanged(float value)
     {
-        if (value > _platformCreator.HighestPlatformY - 4)
-        {
+        if (_platformCreator.HighestPlatformY - _gameConfig.PlatformsMarginY < (value * 2))
             _platformCreator.SpawnPlatform();
-        }
     }
 }

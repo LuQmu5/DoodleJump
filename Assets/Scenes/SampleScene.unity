@@ -299,8 +299,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 637a3c8be3a79974a9ae238502f316cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _spriteRenderer: {fileID: 540242867}
   <Type>k__BackingField: 0
-  <PushPower>k__BackingField: 12
+  <PushPower>k__BackingField: 8
 --- !u!61 &540242865
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -405,7 +406,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.17938554, g: 1, b: 0, a: 1}
   m_FlipX: 0
@@ -768,8 +769,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 637a3c8be3a79974a9ae238502f316cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _spriteRenderer: {fileID: 1673085390}
   <Type>k__BackingField: 0
-  <PushPower>k__BackingField: 12
+  <PushPower>k__BackingField: 8
 --- !u!61 &1673085388
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -874,7 +876,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.17938554, g: 1, b: 0, a: 1}
   m_FlipX: 0
@@ -1083,7 +1085,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -2003695099, guid: 4ece870ff8a9f9d4fbfa77f582ecf62d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1127,8 +1129,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 637a3c8be3a79974a9ae238502f316cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _spriteRenderer: {fileID: 1864830960}
   <Type>k__BackingField: 0
-  <PushPower>k__BackingField: 12
+  <PushPower>k__BackingField: 8
 --- !u!61 &1864830958
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1233,7 +1236,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.17938554, g: 1, b: 0, a: 1}
   m_FlipX: 0
@@ -1292,8 +1295,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 637a3c8be3a79974a9ae238502f316cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _spriteRenderer: {fileID: 1931883602}
   <Type>k__BackingField: 0
-  <PushPower>k__BackingField: 12
+  <PushPower>k__BackingField: 8
 --- !u!61 &1931883600
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1398,7 +1402,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.17938554, g: 1, b: 0, a: 1}
   m_FlipX: 0
@@ -1456,8 +1460,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 637a3c8be3a79974a9ae238502f316cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _spriteRenderer: {fileID: 6209866009201997570}
   <Type>k__BackingField: 0
-  <PushPower>k__BackingField: 12
+  <PushPower>k__BackingField: 8
 --- !u!212 &6209866009201997570
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1498,7 +1503,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.17938554, g: 1, b: 0, a: 1}
   m_FlipX: 0

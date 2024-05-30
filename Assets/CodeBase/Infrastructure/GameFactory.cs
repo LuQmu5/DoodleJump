@@ -3,22 +3,20 @@ using System.Linq;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-public class PlatformFactory
+public class GameFactory
 {
     private const string PlatformConfigsPath = "StaticData/Platforms";
 
-    private PlatformData[] _data;
+    private PlatformData[] _platformData;
 
-    public PlatformFactory()
+    public GameFactory()
     {
-        Debug.Log(GetType());
-
-        _data = Resources.LoadAll<PlatformData>(PlatformConfigsPath);
+        _platformData = Resources.LoadAll<PlatformData>(PlatformConfigsPath);
     }
 
-    public Platform Get(PlatformType type)
+    public Platform GetPlatformByType(PlatformType type)
     {
-        PlatformData data = _data.FirstOrDefault(i => i.Type == type);
+        PlatformData data = _platformData.FirstOrDefault(i => i.Type == type);
 
         if (data == null)
             throw new ArgumentException($"Can't find {type} type platform");
